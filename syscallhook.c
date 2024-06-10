@@ -27,7 +27,7 @@ VOID UnloadDriver(PDRIVER_OBJECT DriverObject) {
 NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath) {
     UNREFERENCED_PARAMETER(RegistryPath);
     DriverObject->DriverUnload = UnloadDriver;
-    // Hook system call here (address resolution omitted for brevity)
+    // Hook system call here (im not spoonfeeding)
     DbgPrint("SysCallHook: Loaded\n");
     return STATUS_SUCCESS;
 }
